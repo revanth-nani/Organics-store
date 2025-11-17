@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chaitva Organics - Pure & Natural</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            background: #f4fff4;
+        }
+
+        /* NAVBAR */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background: #1b5e20;
+            color: white;
+        }
+        nav a {
+            margin-left: 20px;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)),
+            url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1600&q=60');
+            background-size: cover;
+            background-position: center;
+            height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+        .hero h2 {
+            font-size: 3.5rem;
+            margin: 0;
+        }
+        .hero p {
+            max-width: 700px;
+            font-size: 1.2rem;
+        }
+        .btn {
+            background: #66bb6a;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1rem;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .btn:hover { background: #43a047; }
+
+        /* PRODUCT SECTION */
+        .section {
+            padding: 70px 50px;
+            text-align: center;
+        }
+        .section h3 {
+            font-size: 2.3rem;
+            color: #1b5e20;
+        }
+
+        .products {
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+        }
+        .product {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            overflow: hidden;
+            transition: 0.3s;
+        }
+        .product:hover { transform: translateY(-6px); }
+        .product img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+        .product h4 {
+            margin: 15px;
+            font-size: 1.2rem;
+            color: #1b5e20;
+        }
+
+        /* DECORATIVE LEAF BACKGROUND SECTION */
+        .leaf-section {
+            background-image: url('https://png.pngtree.com/png-clipart/20220424/original/pngtree-green-leaf-organic-theme-background-png-image_7548638.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            padding: 80px 50px;
+            text-align: center;
+        }
+        .leaf-section h3 {
+            color: #2e7d32;
+            font-size: 2.4rem;
+        }
+        .leaf-section p {
+            max-width: 700px;
+            margin: auto;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        /* ABOUT SECTION */
+        .about {
+            display: flex;
+            padding: 80px 50px;
+            gap: 40px;
+            align-items: center;
+            flex-wrap: wrap;
+            background: #e8f5e9;
+        }
+        .about img {
+            width: 45%;
+            border-radius: 20px;
+        }
+        .about-text {
+            width: 50%;
+            min-width: 300px;
+        }
+        .about-text h3 {
+            color: #1b5e20;
+            font-size: 2.3rem;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #1b5e20;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 800px) {
+            .about {
+                flex-direction: column;
+                text-align: center;
+            }
+            .about img, .about-text {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <h1>Chaitva Organics</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Products</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div>
+            <h2>Eat Clean. Live Green.</h2>
+            <p>Fresh organic rice, millets, oils and spices — straight from the farms to your kitchen.</p>
+            <button class="btn">Shop Now</button>
+        </div>
+    </section>
+
+    <!-- PRODUCT SECTION -->
+    <section class="section">
+        <h3>Our Natural Organic Products 🌿</h3>
+
+        <div class="products">
+            <div class="product">
+                <img src="https://images.unsplash.com/photo-1600783486185-c31cb0f6b0b8" alt="">
+                <h4>Organic Rice</h4>
+            </div>
+
+            <div class="product">
+                <img src="https://images.unsplash.com/photo-1598515214039-57c20a1fd61d" alt="">
+                <h4>Millets Variety</h4>
+            </div>
+
+            <div class="product">
+                <img src="https://images.unsplash.com/photo-1587731556938-38755b4803a6" alt="">
+                <h4>Cold Pressed Oils</h4>
+            </div>
+
+            <div class="product">
+                <img src="https://images.unsplash.com/photo-1668236545153-e5b87d0af9f5" alt="">
+                <h4>Organic Spices</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- LEAF BACKGROUND SECTION -->
+    <section class="leaf-section">
+        <h3>Naturally Grown • Purely Delivered</h3>
+        <p>
+            Chaitva Organics works directly with trusted farmers who grow crops using traditional, chemical-free organic methods.
+            We ensure purity, freshness, and high nutritional value in every product.
+        </p>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about">
+        <img src="https://images.unsplash.com/photo-1504198453319-5ce911bafcde?auto=format&fit=crop&w=900&q=60" alt="">
+        <div class="about-text">
+            <h3>Why Choose Us?</h3>
+            <p>
+                ✔ 100% Organically grown  
+                ✔ No chemicals or fertilizers  
+                ✔ Freshly sourced from farm  
+                ✔ Packed with nutrients  
+                ✔ Sustainable & eco-friendly  
+            </p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        © 2025 Chaitva Organics • Pure Organic Goodness 🌱
+    </footer>
+
+</body>
+</html>
