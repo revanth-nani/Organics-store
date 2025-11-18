@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chaitva Organics — Products</title>
+  <style>
+    :root{
+      --accent:#2b9348;
+      --muted:#6b7280;
+      --bg:#f7faf7;
+      --card:#ffffff;
+      --glass: rgba(255,255,255,0.6);
+      --radius:12px;
+      --shadow: 0 8px 24px rgba(17,24,39,0.06);
+      --maxw:1100px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0}
+    body{
+      padding:28px 18px;
+      background: linear-gradient(180deg,#f6fbf6 0%,var(--bg) 100%);
+      color:#0f172a;
+      -webkit-font-smoothing:antialiased;
+      display:flex;justify-content:center;
+    }
+    .container{width:100%;max-width:var(--maxw)}
+    .header{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;gap:12px}
+    .logo{display:flex;gap:12px;align-items:center;text-decoration:none;color:inherit}
+    .mark{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,#3bbb63,#219653);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:20px;box-shadow:var(--shadow)}
+    .header h1{margin:0;font-size:18px}
+    .nav a{color:var(--muted);margin-left:12px;text-decoration:none;font-weight:600}
+    .hero{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-bottom:20px}
+    .kicker{font-size:13px;color:var(--muted);margin-bottom:6px}
+    .hero h2{margin:0 0 8px 0;font-size:28px}
+    .hero p{margin:0;color:var(--muted)}
+    .hero img{width:180px;height:120px;object-fit:cover;border-radius:12px;box-shadow:var(--shadow)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:18px}
+    .card{background:var(--card);border-radius:var(--radius);padding:14px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:10px;transition:transform .16s,box-shadow .16s}
+    .card:hover{transform:translateY(-6px)}
+    .card img{width:100%;height:150px;object-fit:cover;border-radius:10px}
+    .card h3{margin:0;font-size:16px}
+    .card p{margin:0;color:var(--muted);font-size:14px}
+    .price{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;box-shadow:0 6px 14px rgba(43,147,72,0.18)}
+    .btn.secondary{background:transparent;color:var(--accent);border:1px solid rgba(43,147,72,0.12)}
+    .footer{margin-top:22px;padding:18px;border-radius:12px;background:var(--glass);display:flex;justify-content:space-between;align-items:center}
+    .small{font-size:13px;color:var(--muted)}
+    @media (max-width:880px){
+      .hero{flex-direction:column;align-items:flex-start}
+      .hero img{width:100%;height:180px}
+      body{padding:18px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <a class="logo" href="products.html">
+        <div class="mark">CO</div>
+        <div>
+          <h1>Chaitva Organics</h1>
+          <div class="small">Natural • Sustainable • Honest</div>
+        </div>
+      </a>
+      <nav class="nav">
+        <a href="products.html">Products</a>
+        <a href="payments.html">Payments</a>
+        <a href="thankyou.html">Thank you</a>
+      </nav>
+    </header>
+
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="info">
+        <div class="kicker">Handmade • Ethically sourced</div>
+        <h2 id="heroTitle">Fresh organic goods for your everyday life</h2>
+        <p>Small-batch oils, teas, soaps and wellness powders — sourced transparently from trusted farmers.</p>
+      </div>
+      <img src="https://images.unsplash.com/photo-1528756514091-dee2e3d6f185?q=80&w=800&auto=format&fit=crop" alt="organic products">
+    </section>
+
+    <main>
+      <div class="grid" role="list">
+        <!-- Product 1 -->
+        <article class="card" role="listitem">
+          <img src="https://images.unsplash.com/photo-1542444459-db7d13b34f38?q=80&w=1200&auto=format&fit=crop" alt="Cold-Pressed Sesame Oil">
+          <h3>Cold-Pressed Sesame Oil — 250ml</h3>
+          <p class="small">Unrefined, first-press — rich in antioxidants.</p>
+          <div class="price">
+            <div><strong>₹299</strong></div>
+            <a class="btn" href="payments.html?product=Cold-Pressed%20Sesame%20Oil&price=299">Buy Now</a>
+          </div>
+        </article>
+
+        <!-- Product 2 -->
+        <article class="card" role="listitem">
+          <img src="https://images.unsplash.com/photo-1516222338252-0d39ab1a1d7f?q=80&w=1200&auto=format&fit=crop" alt="Calming Herbal Tea">
+          <h3>Calming Herbal Tea — 50g</h3>
+          <p class="small">Chamomile, mint & tulsi — loose-leaf blend.</p>
+          <div class="price">
+            <div><strong>₹199</strong></div>
+            <a class="btn" href="payments.html?product=Calming%20Herbal%20Tea&price=199">Buy Now</a>
+          </div>
+        </article>
+
+        <!-- Product 3 -->
+        <article class="card" role="listitem">
+          <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1200&auto=format&fit=crop" alt="Natural Soap">
+          <h3>Naturally-Scented Soap — 100g</h3>
+          <p class="small">Rose & neem — gentle cleansing, handmade.</p>
+          <div class="price">
+            <div><strong>₹149</strong></div>
+            <a class="btn" href="payments.html?product=Natural%20Soap&price=149">Buy Now</a>
+          </div>
+        </article>
+
+        <!-- Product 4 -->
+        <article class="card" role="listitem">
+          <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1200&auto=format&fit=crop" alt="Turmeric Powder">
+          <h3>Turmeric Wellness Powder — 100g</h3>
+          <p class="small">Farm-sourced turmeric, no additives.</p>
+          <div class="price">
+            <div><strong>₹249</strong></div>
+            <a class="btn" href="payments.html?product=Turmeric%20Wellness%20Powder&price=249">Buy Now</a>
+          </div>
+        </article>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="small">© Chaitva Organics — All rights reserved</div>
+      <div class="small">Support: hello@chaitva.in</div>
+    </footer>
+  </div>
+</body>
+</html>
