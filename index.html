@@ -1,262 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-L4D6SCQ63R"></script>
-<script>
-  <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-55V7839H');</script>
-<!-- End Google Tag Manager -->
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chaitva Organics - Pure & Natural</title>
 
-  gtag('config', 'G-L4D6SCQ63R',{'debug_mode':true});
-</script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chaitva Organics - Pure & Natural</title>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-L4D6SCQ63R"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-L4D6SCQ63R', { debug_mode: true });
+  </script>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: "Poppins", sans-serif;
-            background: #f4fff4;
-        }
+  <!-- Google Tag Manager (standard snippet) -->
+  <script>
+    (function(w,d,s,l,i){
+      w[l]=w[l]||[]; w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
+      var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l!='dataLayer' ? '&l='+l : '';
+      j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-55V7839H');
+  </script>
 
-        /* NAVBAR */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 50px;
-            background: #1b5e20;
-            color: white;
-        }
-        nav a {
-            margin-left: 20px;
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        /* HERO SECTION */
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)),
-            url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1600&q=60');
-            background-size: cover;
-            background-position: center;
-            height: 90vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: white;
-            padding: 20px;
-        }
-        .hero h2 {
-            font-size: 3.5rem;
-            margin: 0;
-        }
-        .hero p {
-            max-width: 700px;
-            font-size: 1.2rem;
-        }
-        .btn {
-            background: #66bb6a;
-            padding: 12px 30px;
-            border: none;
-            border-radius: 30px;
-            font-size: 1rem;
-            color: white;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-        .btn:hover { background: #43a047; }
-
-        /* PRODUCT SECTION */
-        .section {
-            padding: 70px 50px;
-            text-align: center;
-        }
-        .section h3 {
-            font-size: 2.3rem;
-            color: #1b5e20;
-        }
-
-        .products {
-            margin-top: 40px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 30px;
-        }
-        .product {
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            overflow: hidden;
-            transition: 0.3s;
-        }
-        .product:hover { transform: translateY(-6px); }
-        .product img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-        }
-        .product h4 {
-            margin: 15px;
-            font-size: 1.2rem;
-            color: #1b5e20;
-        }
-
-        /* DECORATIVE LEAF BACKGROUND SECTION */
-        .leaf-section {
-            background-image: url('https://png.pngtree.com/png-clipart/20220424/original/pngtree-green-leaf-organic-theme-background-png-image_7548638.png');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            padding: 80px 50px;
-            text-align: center;
-        }
-        .leaf-section h3 {
-            color: #2e7d32;
-            font-size: 2.4rem;
-        }
-        .leaf-section p {
-            max-width: 700px;
-            margin: auto;
-            font-size: 1.1rem;
-            line-height: 1.7;
-        }
-
-        /* ABOUT SECTION */
-        .about {
-            display: flex;
-            padding: 80px 50px;
-            gap: 40px;
-            align-items: center;
-            flex-wrap: wrap;
-            background: #e8f5e9;
-        }
-        .about img {
-            width: 45%;
-            border-radius: 20px;
-        }
-        .about-text {
-            width: 50%;
-            min-width: 300px;
-        }
-        .about-text h3 {
-            color: #1b5e20;
-            font-size: 2.3rem;
-        }
-
-        /* FOOTER */
-        footer {
-            background: #1b5e20;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-        }
-
-        @media (max-width: 800px) {
-            .about {
-                flex-direction: column;
-                text-align: center;
-            }
-            .about img, .about-text {
-                width: 100%;
-            }
-        }
-    </style>
+  <style>
+    :root{
+      --brand:#1b5e20;
+      --accent:#66bb6a;
+      --muted:#6b7280;
+      --bg:#f4fff4;
+      --card:#fff;
+      --radius:14px;
+      --shadow:0 6px 20px rgba(17,24,39,0.06);
+      font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:var(--bg);color:#0b2b14}
+    header{
+      display:flex;justify-content:space-between;align-items:center;padding:18px 40px;background:var(--brand);color:#fff;
+      position:sticky;top:0;z-index:40;
+    }
+    header h1{margin:0;font-size:20px;letter-spacing:0.2px}
+    nav a{margin-left:18px;color:#fff;text-decoration:none;font-weight:600}
+    .hero{
+      background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.35)),
+                 url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1600&q=60');
+      background-size:cover;background-position:center;height:72vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:28px;color:#fff;
+    }
+    .hero .inner{max-width:980px;padding:18px}
+    .hero h2{font-size:3rem;margin:0 0 12px}
+    .hero p{font-size:1.05rem;margin:0 0 18px;color:rgba(255,255,255,0.92)}
+    .btn{
+      background:var(--accent);border:none;padding:12px 26px;border-radius:999px;font-weight:700;color:#fff;cursor:pointer;box-shadow:var(--shadow)
+    }
+    .btn:hover{transform:translateY(-2px)}
+    .section{padding:64px 40px;text-align:center}
+    .section h3{font-size:2rem;color:var(--brand);margin:0}
+    .products{margin-top:36px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
+    .product{background:var(--card);border-radius:12px;overflow:hidden;box-shadow:var(--shadow);cursor:pointer;transition:transform .16s}
+    .product:hover{transform:translateY(-6px)}
+    .product img{width:100%;height:180px;object-fit:cover;display:block}
+    .product-body{padding:14px;text-align:left}
+    .product h4{margin:0 0 8px;color:var(--brand)}
+    .product .meta{color:var(--muted);font-size:14px}
+    .leaf-section{background-image:url('https://png.pngtree.com/png-clipart/20220424/original/pngtree-green-leaf-organic-theme-background-png-image_7548638.png');background-size:cover;background-position:center;padding:64px 40px;text-align:center}
+    .about{display:flex;gap:28px;padding:56px 40px;align-items:center;background:#e8f5e9;flex-wrap:wrap}
+    .about img{width:420px;max-width:100%;border-radius:14px;box-shadow:var(--shadow)}
+    .about-text{max-width:640px}
+    footer{background:var(--brand);color:#fff;text-align:center;padding:18px;margin-top:24px}
+    .small{font-size:13px;color:var(--muted)}
+    @media (max-width:900px){
+      .hero h2{font-size:2.4rem}
+      header{padding:12px 18px}
+      .section{padding:36px 18px}
+    }
+  </style>
 </head>
-
 <body>
-   <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-55V7839H"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-    <!-- NAVBAR -->
-    <header>
-        <h1>Chaitva Organics</h1>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">Products</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
-        </nav>
-    </header>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-55V7839H" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
 
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <div>
-            <h2>Eat Clean. Live Green.</h2>
-            <p>Fresh organic rice, millets, oils and spices — straight from the farms to your kitchen.</p>
-            <button class="btn">Shop Now</button>
+  <header>
+    <h1>Chaitva Organics</h1>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="payments.html">Payments</a>
+      <a href="thankyou.html">Thank you</a>
+    </nav>
+  </header>
+
+  <section class="hero" aria-label="Hero">
+    <div class="inner">
+      <h2>Eat Clean. Live Green.</h2>
+      <p>Fresh organic rice, millets, oils and spices — straight from the farms to your kitchen.</p>
+      <div style="margin-top:18px">
+        <button class="btn" id="shopNow">Shop Now</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="productsTitle">
+    <h3 id="productsTitle">Our Natural Organic Products 🌿</h3>
+
+    <div class="products" id="productsGrid">
+      <div class="product" data-product="Organic Rice" data-price="399">
+        <img src="https://images.unsplash.com/photo-1600783486185-c31cb0f6b0b8?auto=format&fit=crop&w=1200&q=60" alt="Organic Rice">
+        <div class="product-body">
+          <h4>Organic Rice</h4>
+          <div class="meta">500g • ₹399</div>
         </div>
-    </section>
+      </div>
 
-    <!-- PRODUCT SECTION -->
-    <section class="section">
-        <h3>Our Natural Organic Products 🌿</h3>
-
-        <div class="products">
-            <div class="product">
-                <img src="https://images.unsplash.com/photo-1600783486185-c31cb0f6b0b8" alt="">
-                <h4>Organic Rice</h4>
-            </div>
-
-            <div class="product">
-                <img src="https://images.unsplash.com/photo-1598515214039-57c20a1fd61d" alt="">
-                <h4>Millets Variety</h4>
-            </div>
-
-            <div class="product">
-                <img src="https://images.unsplash.com/photo-1587731556938-38755b4803a6" alt="">
-                <h4>Cold Pressed Oils</h4>
-            </div>
-
-            <div class="product">
-                <img src="https://images.unsplash.com/photo-1668236545153-e5b87d0af9f5" alt="">
-                <h4>Organic Spices</h4>
-            </div>
+      <div class="product" data-product="Millets Variety" data-price="299">
+        <img src="https://images.unsplash.com/photo-1598515214039-57c20a1fd61d?auto=format&fit=crop&w=1200&q=60" alt="Millets Variety">
+        <div class="product-body">
+          <h4>Millets Variety</h4>
+          <div class="meta">500g • ₹299</div>
         </div>
-    </section>
+      </div>
 
-    <!-- LEAF BACKGROUND SECTION -->
-    <section class="leaf-section">
-        <h3>Naturally Grown • Purely Delivered</h3>
-        <p>
-            Chaitva Organics works directly with trusted farmers who grow crops using traditional, chemical-free organic methods.
-            We ensure purity, freshness, and high nutritional value in every product.
-        </p>
-    </section>
-
-    <!-- ABOUT SECTION -->
-    <section class="about">
-        <img src="https://images.unsplash.com/photo-1504198453319-5ce911bafcde?auto=format&fit=crop&w=900&q=60" alt="">
-        <div class="about-text">
-            <h3>Why Choose Us?</h3>
-            <p>
-                ✔ 100% Organically grown  
-                ✔ No chemicals or fertilizers  
-                ✔ Freshly sourced from farm  
-                ✔ Packed with nutrients  
-                ✔ Sustainable & eco-friendly  
-            </p>
+      <div class="product" data-product="Cold Pressed Oils" data-price="349">
+        <img src="https://images.unsplash.com/photo-1587731556938-38755b4803a6?auto=format&fit=crop&w=1200&q=60" alt="Cold Pressed Oils">
+        <div class="product-body">
+          <h4>Cold Pressed Oils</h4>
+          <div class="meta">250ml • ₹349</div>
         </div>
-    </section>
+      </div>
 
-    <!-- FOOTER -->
-    <footer>
-        © 2025 Chaitva Organics • Pure Organic Goodness 🌱
-    </footer>
+      <div class="product" data-product="Organic Spices" data-price="199">
+        <img src="https://images.unsplash.com/photo-1668236545153-e5b87d0af9f5?auto=format&fit=crop&w=1200&q=60" alt="Organic Spices">
+        <div class="product-body">
+          <h4>Organic Spices</h4>
+          <div class="meta">100g • ₹199</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <section class="leaf-section" aria-label="About our sourcing">
+    <h3>Naturally Grown • Purely Delivered</h3>
+    <p>Chaitva Organics works directly with trusted farmers who grow crops using traditional, chemical-free organic methods.
+       We ensure purity, freshness, and high nutritional value in every product.</p>
+  </section>
+
+  <section class="about" aria-label="About">
+    <img src="https://images.unsplash.com/photo-1504198453319-5ce911bafcde?auto=format&fit=crop&w=900&q=60" alt="Farm to table">
+    <div class="about-text">
+      <h3>Why Choose Us?</h3>
+      <p>
+        ✔ 100% Organically grown<br>
+        ✔ No chemicals or fertilizers<br>
+        ✔ Freshly sourced from farm<br>
+        ✔ Packed with nutrients<br>
+        ✔ Sustainable & eco-friendly
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Chaitva Organics • Pure Organic Goodness 🌱
+  </footer>
+
+  <script>
+    // Shop Now: go to products page
+    document.getElementById('shopNow').addEventListener('click', function () {
+      // reliable navigation that works locally and on servers
+      location.assign('products.html');
+    });
+
+    // Make each product card clickable and navigate to payments.html with encoded params
+    (function(){
+      const grid = document.getElementById('productsGrid');
+      grid.addEventListener('click', function (ev) {
+        // find the closest product card
+        const card = ev.target.closest('.product');
+        if (!card) return;
+        const p = card.getAttribute('data-product') || 'Item';
+        const price = card.getAttribute('data-price') || '0';
+        const params = new URLSearchParams({ product: p, price: price });
+        // navigate to payments page with encoded product + price
+        location.assign('payments.html?' + params.toString());
+      });
+
+      // keyboard accessibility: make product cards focusable and respond to Enter key
+      const cards = document.querySelectorAll('.product');
+      cards.forEach(card => {
+        card.setAttribute('tabindex', '0');
+        card.addEventListener('keydown', function(e){
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            const p = card.getAttribute('data-product') || 'Item';
+            const price = card.getAttribute('data-price') || '0';
+            location.assign('payments.html?' + new URLSearchParams({ product: p, price: price }).toString());
+          }
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
