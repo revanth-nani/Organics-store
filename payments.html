@@ -12,7 +12,7 @@
 <body>
   <div class="container">
     <header class="header" role="banner">
-      <a class="logo" href="products.html" aria-label="Chaitva Organics home">
+      <a class="logo" href="index.html" aria-label="Chaitva Organics home">
         <div class="mark">CO</div>
         <div>
           <h1 style="margin:0">Chaitva Organics</h1>
@@ -20,6 +20,7 @@
         </div>
       </a>
       <nav aria-label="Top links">
+        <a class="small" href="index.html" style="text-decoration:none;color:var(--muted);margin-right:12px">Home</a>
         <a class="small" href="products.html" style="text-decoration:none;color:var(--muted);margin-right:12px">Products</a>
         <a class="small" href="thankyou.html" style="text-decoration:none;color:var(--muted)">Thank you</a>
       </nav>
@@ -69,7 +70,7 @@
 
         <div style="display:flex;gap:12px;align-items:center;margin-top:8px;">
           <button id="payBtn" type="submit" class="btn">Pay ₹<span id="displayAmount">0</span></button>
-          <a class="btn secondary" id="backBtn" href="products.html">Back to products</a>
+          <button class="btn secondary" id="backBtn" type="button">Back to products</button>
         </div>
 
         <p class="small" style="margin-top:12px">Note: This is a demo checkout page. Integrate a real payment gateway for production.</p>
@@ -83,11 +84,6 @@
   </div>
 
 <script>
-/*
-  - Prefill product & price from query params (product OR product + price)
-  - Use URLSearchParams and encode values on redirect to thankyou.html
-  - Use location.assign() for navigation
-*/
 (function(){
   document.addEventListener('DOMContentLoaded', function () {
     const params = new URLSearchParams(location.search);
@@ -96,7 +92,7 @@
     const display = document.getElementById('displayAmount');
     const backBtn = document.getElementById('backBtn');
 
-    // Accept both 'price' and 'amount' (some sources may use either)
+    // Accept both 'price' and 'amount' so links from various sources work
     const productParam = params.get('product') || '';
     const priceParam = params.get('price') || params.get('amount') || '';
 
@@ -107,15 +103,12 @@
     amountField.addEventListener('input', updateDisplay);
     updateDisplay();
 
-    // Ensure Back button uses assign (safer than relying on anchor navigation in some contexts)
-    backBtn.addEventListener('click', function(ev){
-      // default behavior will already navigate, but use assign for consistency
-      ev.preventDefault();
+    backBtn.addEventListener('click', function () {
+      // navigate back reliably
       location.assign('products.html');
     });
 
-    // Form submit handler
-    document.getElementById('checkoutForm').addEventListener('submit', function(ev){
+    document.getElementById('checkoutForm').addEventListener('submit', function (ev) {
       ev.preventDefault();
       const name = document.getElementById('fullname').value.trim();
       const email = document.getElementById('email').value.trim();
@@ -128,7 +121,6 @@
       }
 
       const q = new URLSearchParams({ name: name, product: product, amount: amount });
-      // redirect to thankyou with encoded params
       location.assign('thankyou.html?' + q.toString());
     });
   });
