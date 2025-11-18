@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chaitva Organics — Checkout</title>
+  <style>
+    :root{
+      --accent:#2b9348;
+      --muted:#6b7280;
+      --bg:#f7faf7;
+      --card:#ffffff;
+      --radius:12px;
+      --shadow: 0 8px 24px rgba(17,24,39,0.06);
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;padding:28px 18px;background:linear-gradient(180deg,#f6fbf6 0%,var(--bg) 100%);display:flex;justify-content:center;color:#0f172a}
+    .container{width:100%;max-width:900px}
+    .header{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+    .logo{display:flex;gap:12px;align-items:center;text-decoration:none;color:inherit}
+    .mark{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,#3bbb63,#219653);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:20px;box-shadow:var(--shadow)}
+    .small{font-size:13px;color:var(--muted)}
+    .form-card{background:var(--card);padding:18px;border-radius:14px;box-shadow:var(--shadow)}
+    form{display:block}
+    .field{display:flex;flex-direction:column;margin-bottom:12px}
+    label{font-weight:700;margin-bottom:6px;color:#111827}
+    input[type="text"], input[type="email"], input[type="tel"], select{padding:12px;border-radius:10px;border:1px solid #e6eef1;font-size:15px}
+    .row{display:flex;gap:12px}
+    .row .field{flex:1}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;box-shadow:0 6px 14px rgba(43,147,72,0.18);border:none;cursor:pointer}
+    .btn.secondary{background:transparent;color:var(--accent);border:1px solid rgba(43,147,72,0.12);padding:10px 12px}
+    footer{margin-top:18px;padding:12px;color:var(--muted);display:flex;justify-content:space-between}
+    @media (max-width:720px){.row{flex-direction:column}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <a class="logo" href="products.html">
+        <div class="mark">CO</div>
+        <div>
+          <h1 style="margin:0">Chaitva Organics</h1>
+          <div class="small">Secure checkout</div>
+        </div>
+      </a>
+      <nav>
+        <a class="small" href="products.html" style="text-decoration:none;color:var(--muted);margin-right:12px">Products</a>
+        <a class="small" href="thankyou.html" style="text-decoration:none;color:var(--muted)">Thank you</a>
+      </nav>
+    </header>
+
+    <main class="form-card" role="main" aria-labelledby="checkoutTitle">
+      <h2 id="checkoutTitle" style="margin-top:0">Checkout</h2>
+      <p class="small">Fill your details to complete the purchase. (Demo payment flow — replace with real gateway for production.)</p>
+
+      <form id="checkoutForm" novalidate>
+        <div class="field">
+          <label for="productName">Product</label>
+          <input id="productName" name="product" type="text" placeholder="Product name (pre-filled)" />
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label for="fullname">Full name</label>
+            <input id="fullname" name="fullname" type="text" placeholder="Your full name" required />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="tel" placeholder="+91 98765 43210" />
+          </div>
+          <div class="field">
+            <label for="amount">Amount (₹)</label>
+            <input id="amount" name="amount" type="text" placeholder="Amount" required />
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="method">Payment method</label>
+          <select id="method" name="method">
+            <option>UPI / BHIM</option>
+            <option>Netbanking</option>
+            <option>Card (Visa / Mastercard)</option>
+            <option>Cash on Delivery</option>
+          </select>
+        </div>
+
+        <div style="display:flex;gap:12px;align-items:center;margin-top:8px;">
+          <button id="payBtn" type="submit" class="btn">Pay ₹<span id="displayAmount">0</span></button>
+          <a class="btn secondary" href="products.html">Back to products</a>
+        </div>
+
+        <p class="small" style="margin-top:12px">Note: This is a demo checkout page. Integrate a payment gateway (Razorpay/Stripe) for production.</p>
+      </form>
+    </main>
+
+    <footer>
+      <div class="small">Need help? hello@chaitva.in</div>
+      <div class="small">Secure • Encrypted • Trusted</div>
+    </footer>
+  </div>
+
+  <script>
+    // Wait for DOM fully loaded
+    document.addEventListener('DOMContentLoaded', function () {
+      const params = new URLSearchParams(location.search);
+      const productField = document.getElementById('productName');
+      const amountField = document.getElementById('amount');
+      const display = document.getElementById('displayAmount');
+
+      // Pre-fill from query string if present
+      if (params.get('product')) productField.value = decodeURIComponent(params.get('product'));
+      if (params.get('price')) amountField.value = decodeURIComponent(params.get('price'));
+
+      // Update display amount
+      function updateDisplay(){ display.textContent = amountField.value || '0'; }
+      amountField.addEventListener('input', updateDisplay);
+      updateDisplay();
+
+      // Handle form submission (simulate payment)
+      document.getElementById('checkoutForm').addEventListener('submit', function (ev) {
+        ev.preventDefault();
+        const name = document.getElementById('fullname').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const amount = amountField.value.trim();
+        if (!name || !email) {
+          alert('Please enter your name and email.');
+          return;
+        }
+        // Simulate success: redirect to thank-you with safe params
+        const q = new URLSearchParams({
+          name: name,
+          product: productField.value || 'Item',
+          amount: amount || '0'
+        });
+        // In production: call server + payment gateway here
+        location.href = 'thankyou.html?' + q.toString();
+      });
+    });
+  </script>
+</body>
+</html>
