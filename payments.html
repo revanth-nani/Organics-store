@@ -1,36 +1,13 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Chaitva Organics — Products</title>
-  <style>
-    :root{
-      --accent:#2b9348; --muted:#6b7280; --bg:#f7faf7; --card:#fff;
-      --radius:12px; --shadow:0 8px 24px rgba(17,24,39,0.06);
-      --maxw:1100px; font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%;margin:0}
-    body{display:flex;justify-content:center;background:linear-gradient(180deg,#f6fbf6 0%,var(--bg)100%);color:#0f172a;padding:28px 18px}
-    .container{width:100%;max-width:var(--maxw)}
-    .header{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;gap:12px}
-    .logo{display:flex;gap:12px;align-items:center;text-decoration:none;color:inherit}
-    .mark{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,#3bbb63,#219653);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:20px;box-shadow:var(--shadow)}
-    .nav a{color:var(--muted);margin-left:12px;text-decoration:none;font-weight:600}
-    .hero{display:flex;gap:24px;align-items:center;margin-bottom:20px}
-    .hero img{width:180px;height:120px;object-fit:cover;border-radius:12px;box-shadow:var(--shadow)}
-    .kicker{font-size:13px;color:var(--muted);margin-bottom:6px}
-    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:18px}
-    .card{background:var(--card);border-radius:var(--radius);padding:14px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:10px;transition:transform .16s}
-    .card:hover{transform:translateY(-6px)}
-    .card img{width:100%;height:150px;object-fit:cover;border-radius:10px}
-    .price{margin-top:auto;display:flex;align-items:center;justify-content:space-between}
-    .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;box-shadow:0 6px 14px rgba(43,147,72,0.18)}
-    .small{font-size:13px;color:var(--muted)}
-    .footer{margin-top:22px;padding:18px;border-radius:12px;background:rgba(255,255,255,0.6);display:flex;justify-content:space-between;align-items:center}
-    @media (max-width:880px){.hero{flex-direction:column;align-items:flex-start}.hero img{width:100%;height:180px}}
-  </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Chaitva Organics — Checkout</title>
+<style>
+  :root{--accent:#2b9348;--muted:#6b7280;--bg:#f7faf7;--card:#fff;--radius:12px;--shadow:0 8px 24px rgba(17,24,39,0.06);font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+  *{box-sizing:border-box}html,body{height:100%;margin:0}body{display:flex;justify-content:center;background:linear-gradient(180deg,#f6fbf6 0%,var(--bg)100%);color:#0f172a;padding:28px 18px}.container{width:100%;max-width:900px}.header{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}.logo{display:flex;gap:12px;align-items:center;text-decoration:none;color:inherit}.mark{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,#3bbb63,#219653);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:20px;box-shadow:var(--shadow)}.small{font-size:13px;color:var(--muted)}.form-card{background:var(--card);padding:18px;border-radius:14px;box-shadow:var(--shadow)}.field{display:flex;flex-direction:column;margin-bottom:12px}label{font-weight:700;margin-bottom:6px;color:#111827}input[type="text"],input[type="email"],input[type="tel"],select{padding:12px;border-radius:10px;border:1px solid #e6eef1;font-size:15px}.row{display:flex;gap:12px}.row .field{flex:1}.btn{display:inline-block;padding:10px 14px;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;box-shadow:0 6px 14px rgba(43,147,72,0.18);border:none;cursor:pointer}.btn.secondary{background:transparent;color:var(--accent);border:1px solid rgba(43,147,72,0.12);padding:10px 12px;text-decoration:none}footer{margin-top:18px;padding:12px;color:var(--muted);display:flex;justify-content:space-between}@media (max-width:720px){.row{flex-direction:column}}
+</style>
 </head>
 <body>
   <div class="container">
@@ -39,78 +16,123 @@
         <div class="mark">CO</div>
         <div>
           <h1 style="margin:0">Chaitva Organics</h1>
-          <div class="small">Natural • Sustainable • Honest</div>
+          <div class="small">Secure checkout</div>
         </div>
       </a>
-      <nav class="nav" aria-label="Main navigation">
-        <a href="products.html">Products</a>
-        <a href="payments.html">Payments</a>
-        <a href="thankyou.html">Thank you</a>
+      <nav aria-label="Top links">
+        <a class="small" href="products.html" style="text-decoration:none;color:var(--muted);margin-right:12px">Products</a>
+        <a class="small" href="thankyou.html" style="text-decoration:none;color:var(--muted)">Thank you</a>
       </nav>
     </header>
 
-    <section class="hero" aria-labelledby="heroTitle">
-      <div>
-        <div class="kicker">Handmade • Ethically sourced</div>
-        <h2 id="heroTitle" style="margin:0 0 8px 0">Fresh organic goods for your everyday life</h2>
-        <p class="small" style="margin:0">Small-batch oils, teas, soaps and wellness powders — sourced transparently from trusted farmers.</p>
-      </div>
-      <img src="https://images.unsplash.com/photo-1528756514091-dee2e3d6f185?q=80&w=800&auto=format&fit=crop" alt="organic products">
-    </section>
+    <main class="form-card" role="main" aria-labelledby="checkoutTitle">
+      <h2 id="checkoutTitle" style="margin-top:0">Checkout</h2>
+      <p class="small">Fill your details to complete the purchase. (Demo flow — replace with real gateway for production.)</p>
 
-    <main>
-      <div class="grid" role="list">
-        <!-- Product 1 -->
-        <article class="card" role="listitem">
-          <img src="https://images.unsplash.com/photo-1542444459-db7d13b34f38?q=80&w=1200&auto=format&fit=crop" alt="Cold-Pressed Sesame Oil">
-          <h3 style="margin:0">Cold-Pressed Sesame Oil — 250ml</h3>
-          <p class="small" style="margin:6px 0 0 0">Unrefined, first-press — rich in antioxidants.</p>
-          <div class="price">
-            <div><strong>₹299</strong></div>
-            <!-- note: values are URL encoded -->
-            <a class="btn" href="payments.html?product=Cold-Pressed%20Sesame%20Oil&price=299">Buy Now</a>
-          </div>
-        </article>
+      <form id="checkoutForm" novalidate>
+        <div class="field">
+          <label for="productName">Product</label>
+          <input id="productName" name="product" type="text" placeholder="Product name (pre-filled)" />
+        </div>
 
-        <!-- Product 2 -->
-        <article class="card" role="listitem">
-          <img src="https://images.unsplash.com/photo-1516222338252-0d39ab1a1d7f?q=80&w=1200&auto=format&fit=crop" alt="Calming Herbal Tea">
-          <h3 style="margin:0">Calming Herbal Tea — 50g</h3>
-          <p class="small" style="margin:6px 0 0 0">Chamomile, mint & tulsi — loose-leaf blend.</p>
-          <div class="price">
-            <div><strong>₹199</strong></div>
-            <a class="btn" href="payments.html?product=Calming%20Herbal%20Tea&price=199">Buy Now</a>
+        <div class="row">
+          <div class="field">
+            <label for="fullname">Full name</label>
+            <input id="fullname" name="fullname" type="text" placeholder="Your full name" required />
           </div>
-        </article>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required />
+          </div>
+        </div>
 
-        <!-- Product 3 -->
-        <article class="card" role="listitem">
-          <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1200&auto=format&fit=crop" alt="Soap">
-          <h3 style="margin:0">Naturally-Scented Soap — 100g</h3>
-          <p class="small" style="margin:6px 0 0 0">Rose & neem — gentle cleansing, handmade.</p>
-          <div class="price">
-            <div><strong>₹149</strong></div>
-            <a class="btn" href="payments.html?product=Naturally-Scented%20Soap&price=149">Buy Now</a>
+        <div class="row">
+          <div class="field">
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="tel" placeholder="+91 98765 43210" />
           </div>
-        </article>
+          <div class="field">
+            <label for="amount">Amount (₹)</label>
+            <input id="amount" name="amount" type="text" placeholder="Amount" required />
+          </div>
+        </div>
 
-        <!-- Product 4 -->
-        <article class="card" role="listitem">
-          <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1200&auto=format&fit=crop" alt="Turmeric">
-          <h3 style="margin:0">Turmeric Wellness Powder — 100g</h3>
-          <p class="small" style="margin:6px 0 0 0">Farm-sourced turmeric, no additives.</p>
-          <div class="price">
-            <div><strong>₹249</strong></div>
-            <a class="btn" href="payments.html?product=Turmeric%20Wellness%20Powder&price=249">Buy Now</a>
-          </div>
-        </article>
-      </div>
+        <div class="field">
+          <label for="method">Payment method</label>
+          <select id="method" name="method">
+            <option>UPI / BHIM</option>
+            <option>Netbanking</option>
+            <option>Card (Visa / Mastercard)</option>
+            <option>Cash on Delivery</option>
+          </select>
+        </div>
+
+        <div style="display:flex;gap:12px;align-items:center;margin-top:8px;">
+          <button id="payBtn" type="submit" class="btn">Pay ₹<span id="displayAmount">0</span></button>
+          <a class="btn secondary" id="backBtn" href="products.html">Back to products</a>
+        </div>
+
+        <p class="small" style="margin-top:12px">Note: This is a demo checkout page. Integrate a real payment gateway for production.</p>
+      </form>
     </main>
 
-    <footer class="footer" role="contentinfo">
-      <div class="small">© Chaitva Organics — All rights reserved</div>
-      <div class="small">Support: hello@chaitva.in</div>
+    <footer role="contentinfo">
+      <div class="small">Need help? hello@chaitva.in</div>
+      <div class="small">Secure • Encrypted • Trusted</div>
     </footer>
   </div>
+
+<script>
+/*
+  - Prefill product & price from query params (product OR product + price)
+  - Use URLSearchParams and encode values on redirect to thankyou.html
+  - Use location.assign() for navigation
+*/
+(function(){
+  document.addEventListener('DOMContentLoaded', function () {
+    const params = new URLSearchParams(location.search);
+    const productField = document.getElementById('productName');
+    const amountField = document.getElementById('amount');
+    const display = document.getElementById('displayAmount');
+    const backBtn = document.getElementById('backBtn');
+
+    // Accept both 'price' and 'amount' (some sources may use either)
+    const productParam = params.get('product') || '';
+    const priceParam = params.get('price') || params.get('amount') || '';
+
+    if (productParam) productField.value = productParam;
+    if (priceParam) amountField.value = priceParam;
+
+    function updateDisplay(){ display.textContent = amountField.value || '0'; }
+    amountField.addEventListener('input', updateDisplay);
+    updateDisplay();
+
+    // Ensure Back button uses assign (safer than relying on anchor navigation in some contexts)
+    backBtn.addEventListener('click', function(ev){
+      // default behavior will already navigate, but use assign for consistency
+      ev.preventDefault();
+      location.assign('products.html');
+    });
+
+    // Form submit handler
+    document.getElementById('checkoutForm').addEventListener('submit', function(ev){
+      ev.preventDefault();
+      const name = document.getElementById('fullname').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const product = productField.value.trim() || 'Item';
+      const amount = amountField.value.trim() || '0';
+
+      if (!name || !email) {
+        alert('Please enter your name and email.');
+        return;
+      }
+
+      const q = new URLSearchParams({ name: name, product: product, amount: amount });
+      // redirect to thankyou with encoded params
+      location.assign('thankyou.html?' + q.toString());
+    });
+  });
+})();
+</script>
 </body>
 </html>
