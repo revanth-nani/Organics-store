@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chaitva Organics — Thank you</title>
+  <style>
+    :root{--accent:#2b9348; --muted:#6b7280; --bg:#f7faf7; --card:#fff; --radius:12px; --shadow:0 8px 24px rgba(17,24,39,0.06); font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;}
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0}
+    body{display:flex;justify-content:center;background:linear-gradient(180deg,#f6fbf6 0%,var(--bg)100%);color:#0f172a;padding:28px 18px}
+    .container{width:100%;max-width:900px}
+    .header{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+    .logo{display:flex;gap:12px;align-items:center;text-decoration:none;color:inherit}
+    .mark{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,#3bbb63,#219653);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:20px;box-shadow:var(--shadow)}
+    .form-card{background:var(--card);padding:22px;border-radius:14px;box-shadow:var(--shadow);text-align:center}
+    h2{margin:8px 0}
+    .small{font-size:13px;color:var(--muted)}
+    .card{background:var(--card);border-radius:10px;padding:12px;box-shadow:var(--shadow);text-align:left}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:700}
+    footer{margin-top:18px;padding:12px;color:var(--muted);display:flex;justify-content:space-between}
+    .icon{width:88px;height:88px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#E9F6EE,#D7F0DF);font-size:42px;margin-bottom:6px;box-shadow:0 8px 18px rgba(43,147,72,0.08)}
+    @media (max-width:720px){.grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="header" role="banner">
+      <a class="logo" href="products.html" aria-label="Chaitva Organics home">
+        <div class="mark">CO</div>
+        <div>
+          <h1 style="margin:0">Chaitva Organics</h1>
+          <div class="small">Order confirmed</div>
+        </div>
+      </a>
+      <nav aria-label="Top links">
+        <a class="small" href="products.html" style="text-decoration:none;color:var(--muted);margin-right:12px">Products</a>
+      </nav>
+    </header>
+
+    <main class="form-card" role="main" aria-labelledby="thankTitle">
+      <div style="max-width:720px;margin:0 auto">
+        <div class="icon" aria-hidden="true">🎉</div>
+        <h2 id="thankTitle">Thank you!</h2>
+        <p id="summary" class="small">We've received your order.</p>
+
+        <div class="grid" aria-hidden="false">
+          <div class="card small" role="region" aria-label="What happens next">
+            <h3 style="margin-top:0">What happens next</h3>
+            <ul style="margin:0;padding-left:18px;color:var(--muted)">
+              <li>Order confirmation email will be sent to you shortly.</li>
+              <li>We pack & ship within 1–2 business days.</li>
+              <li>Tracking details are emailed once your order ships.</li>
+            </ul>
+          </div>
+
+          <div class="card small" role="region" aria-label="Customer support">
+            <h3 style="margin-top:0">Customer support</h3>
+            <p class="small">Questions? Email <a href="mailto:hello@chaitva.in">hello@chaitva.in</a> or call <a href="tel:+919876543210">+91 98765 43210</a></p>
+            <p class="small" style="margin-top:6px">Order issues? Reply to your confirmation email with your order details.</p>
+          </div>
+        </div>
+
+        <div style="margin-top:16px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+          <a class="btn" id="continueBtn" href="products.html">Continue shopping</a>
+          <a class="btn" id="downloadInvoice" href="#" style="background:#fff;color:var(--accent);border:1px solid rgba(43,147,72,0.12);text-decoration:none">Download invoice (demo)</a>
+        </div>
+      </div>
+    </main>
+
+    <footer role="contentinfo">
+      <div class="small">© Chaitva Organics</div>
+      <div class="small">Follow us • Instagram</div>
+    </footer>
+  </div>
+
+  <script>
+    // Read URL params and display the personalized summary,
+    // ensure Continue Shopping links to products.html, and provide a demo invoice download.
+    (function () {
+      const params = new URLSearchParams(location.search);
+      const name = params.get('name') ? params.get('name') : '';
+      const product = params.get('product') ? params.get('product') : '';
+      const amount = params.get('amount') ? params.get('amount') : '';
+
+      const greet = document.getElementById('thankTitle');
+      const summary = document.getElementById('summary');
+      const continueBtn = document.getElementById('continueBtn');
+
+      if (name) greet.textContent = `Thank you, ${name}!`;
+      if (product || amount) {
+        const amtText = amount ? ` Amount: ₹${amount}.` : '';
+        summary.textContent = `We've received your order${product ? ' for ' + product : ''}.${amtText}`;
+      }
+
+      // ensure continue button goes back to products page (explicit)
+      continueBtn.href = 'products.html';
+
+      // Demo invoice as text file (client-side)
+      document.getElementById('downloadInvoice').addEventListener('click', function (e) {
+        e.preventDefault();
+        const invoiceLines = [
+          'Chaitva Organics — Invoice (Demo)',
+          '---------------------------------',
+          `Customer: ${name || '—'}`,
+          `Product: ${product || '—'}`,
+          `Amount: ₹${amount || '0'}`,
+          `Date: ${new Date().toLocaleString()}`,
+          '',
+          'Thank you for your order!'
+        ];
+        const blob = new Blob([invoiceLines.join('\n')], { type: 'text/plain' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `invoice-${(name || 'customer').replace(/\s+/g,'_')}.txt`;
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        URL.revokeObjectURL(url);
+      });
+    })();
+  </script>
+</body>
+</html>
