@@ -1,108 +1,105 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Chaitva Organics — Products</title>
-<style>
-  :root{--accent:#2b9348;--muted:#6b7280;--bg:#f7faf7;--card:#fff;--radius:12px;--shadow:0 8px 24px rgba(17,24,39,0.06);--maxw:1100px;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
-  *{box-sizing:border-box}html,body{height:100%;margin:0}body{display:flex;justify-content:center;background:linear-gradient(180deg,#f6fbf6 0%,var(--bg)100%);color:#0f172a;padding:28px 18px}
-  .container{width:100%;max-width:var(--maxw)}.header{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;gap:12px}.logo{display:flex;gap:12px;align-items:center;text-decoration:none;color:inherit}.mark{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,#3bbb63,#219653);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:20px;box-shadow:var(--shadow)}.nav a{color:var(--muted);margin-left:12px;text-decoration:none;font-weight:600}.hero{display:flex;gap:24px;align-items:center;margin-bottom:20px}.hero img{width:180px;height:120px;object-fit:cover;border-radius:12px;box-shadow:var(--shadow)}.kicker{font-size:13px;color:var(--muted);margin-bottom:6px}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:18px}.card{background:var(--card);border-radius:var(--radius);padding:14px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:10px;transition:transform .16s}.card:hover{transform:translateY(-6px)}.card img{width:100%;height:150px;object-fit:cover;border-radius:10px}.price{margin-top:auto;display:flex;align-items:center;justify-content:space-between}.btn{display:inline-block;padding:10px 14px;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;box-shadow:0 6px 14px rgba(43,147,72,0.18);cursor:pointer;border:none}.small{font-size:13px;color:var(--muted)}.footer{margin-top:22px;padding:18px;border-radius:12px;background:rgba(255,255,255,0.6);display:flex;justify-content:space-between;align-items:center}@media (max-width:880px){.hero{flex-direction:column;align-items:flex-start}.hero img{width:100%;height:180px}}
-</style>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chaitva Organics — Products</title>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-L4D6SCQ63R"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-L4D6SCQ63R', { debug_mode: true });
+  </script>
+
+  <!-- GTM head -->
+  <script>
+    (function(w,d,s,l,i){
+      w[l]=w[l]||[]; w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
+      var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l!='dataLayer' ? '&l='+l : '';
+      j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-55V7839H');
+  </script>
+
+  <style>
+    :root{--accent:#2b9348;--muted:#6b7280;--bg:#f7faf7;--card:#fff;--radius:12px;--shadow:0 8px 24px rgba(17,24,39,0.06);--maxw:1100px;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+    *{box-sizing:border-box}html,body{height:100%;margin:0}body{display:flex;justify-content:center;background:linear-gradient(180deg,#f6fbf6 0%,var(--bg)100%);color:#0f172a;padding:28px 18px}
+    .container{width:100%;max-width:var(--maxw)}.header{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;gap:12px}.logo{display:flex;gap:12px;align-items:center;text-decoration:none;color:inherit}.mark{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,#3bbb63,#219653);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:20px;box-shadow:var(--shadow)}.nav a{color:var(--muted);margin-left:12px;text-decoration:none;font-weight:600}.hero{display:flex;gap:24px;align-items:center;margin-bottom:20px}.hero img{width:180px;height:120px;object-fit:cover;border-radius:12px;box-shadow:var(--shadow)}.kicker{font-size:13px;color:var(--muted);margin-bottom:6px}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:18px}.card{background:var(--card);border-radius:var(--radius);padding:14px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:10px;transition:transform .16s}.card:hover{transform:translateY(-6px)}.card img{width:100%;height:150px;object-fit:cover;border-radius:10px}.price{margin-top:auto;display:flex;align-items:center;justify-content:space-between}.btn{display:inline-block;padding:10px 14px;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;box-shadow:0 6px 14px rgba(43,147,72,0.18);cursor:pointer;border:none}.small{font-size:13px;color:var(--muted)}.footer{margin-top:22px;padding:18px;border-radius:12px;background:rgba(255,255,255,0.6);display:flex;justify-content:space-between;align-items:center}@media (max-width:880px){.hero{flex-direction:column;align-items:flex-start}.hero img{width:100%;height:180px}}
+  </style>
 </head>
 <body>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-55V7839H" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
   <div class="container">
     <header class="header" role="banner">
-      <a class="logo" href="index.html" aria-label="Chaitva Organics home">
+      <a class="logo" href="https://revanth-nani.github.io/Organics-store/index.html" aria-label="home">
         <div class="mark">CO</div>
-        <div>
-          <h1 style="margin:0">Chaitva Organics</h1>
-          <div class="small">Natural • Sustainable • Honest</div>
-        </div>
+        <div><h1 style="margin:0">Chaitva Organics</h1><div class="small">Natural • Sustainable • Honest</div></div>
       </a>
       <nav class="nav" aria-label="Main navigation">
-        <a href="index.html">Home</a>
-        <a href="products.html">Products</a>
-        <a href="payments.html">Payments</a>
-        <a href="thankyou.html">Thank you</a>
+        <a href="https://revanth-nani.github.io/Organics-store/index.html">Home</a>
+        <a href="https://revanth-nani.github.io/Organics-store/products.html">Products</a>
+        <a href="https://revanth-nani.github.io/Organics-store/payments.html">Payments</a>
+        <a href="https://revanth-nani.github.io/Organics-store/thankyou.html">Thank you</a>
       </nav>
     </header>
 
     <section class="hero" aria-labelledby="heroTitle">
-      <div>
-        <div class="kicker">Handmade • Ethically sourced</div>
-        <h2 id="heroTitle" style="margin:0 0 8px 0">Fresh organic goods for your everyday life</h2>
-        <p class="small" style="margin:0">Small-batch oils, teas, soaps and wellness powders — sourced transparently from trusted farmers.</p>
-      </div>
+      <div><div class="kicker">Handmade • Ethically sourced</div><h2 id="heroTitle" style="margin:0 0 8px 0">Fresh organic goods</h2><p class="small" style="margin:0">Small-batch oils, teas, soaps and wellness powders.</p></div>
       <img src="https://images.unsplash.com/photo-1528756514091-dee2e3d6f185?q=80&w=800&auto=format&fit=crop" alt="organic products">
     </section>
 
     <main>
-      <div class="grid" role="list" id="productsList">
+      <div class="grid" role="list">
         <article class="card" role="listitem" data-product="Cold-Pressed Sesame Oil" data-price="299">
           <img src="https://images.unsplash.com/photo-1542444459-db7d13b34f38?q=80&w=1200&auto=format&fit=crop" alt="Cold-Pressed Sesame Oil">
           <h3 style="margin:0">Cold-Pressed Sesame Oil — 250ml</h3>
           <p class="small" style="margin:6px 0 0 0">Unrefined, first-press — rich in antioxidants.</p>
-          <div class="price">
-            <div><strong>₹299</strong></div>
-            <button class="btn buyBtn" type="button">Buy Now</button>
-          </div>
+          <div class="price"><div><strong>₹299</strong></div><button class="btn buyBtn" type="button">Buy Now</button></div>
         </article>
 
         <article class="card" role="listitem" data-product="Calming Herbal Tea" data-price="199">
           <img src="https://images.unsplash.com/photo-1516222338252-0d39ab1a1d7f?q=80&w=1200&auto=format&fit=crop" alt="Calming Herbal Tea">
           <h3 style="margin:0">Calming Herbal Tea — 50g</h3>
           <p class="small" style="margin:6px 0 0 0">Chamomile, mint & tulsi — loose-leaf blend.</p>
-          <div class="price">
-            <div><strong>₹199</strong></div>
-            <button class="btn buyBtn" type="button">Buy Now</button>
-          </div>
+          <div class="price"><div><strong>₹199</strong></div><button class="btn buyBtn" type="button">Buy Now</button></div>
         </article>
 
         <article class="card" role="listitem" data-product="Naturally-Scented Soap" data-price="149">
           <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1200&auto=format&fit=crop" alt="Soap">
           <h3 style="margin:0">Naturally-Scented Soap — 100g</h3>
-          <p class="small" style="margin:6px 0 0 0">Rose & neem — gentle cleansing, handmade.</p>
-          <div class="price">
-            <div><strong>₹149</strong></div>
-            <button class="btn buyBtn" type="button">Buy Now</button>
-          </div>
+          <p class="small" style="margin:6px 0 0 0">Rose & neem — gentle cleansing.</p>
+          <div class="price"><div><strong>₹149</strong></div><button class="btn buyBtn" type="button">Buy Now</button></div>
         </article>
 
         <article class="card" role="listitem" data-product="Turmeric Wellness Powder" data-price="249">
           <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1200&auto=format&fit=crop" alt="Turmeric">
           <h3 style="margin:0">Turmeric Wellness Powder — 100g</h3>
           <p class="small" style="margin:6px 0 0 0">Farm-sourced turmeric, no additives.</p>
-          <div class="price">
-            <div><strong>₹249</strong></div>
-            <button class="btn buyBtn" type="button">Buy Now</button>
-          </div>
+          <div class="price"><div><strong>₹249</strong></div><button class="btn buyBtn" type="button">Buy Now</button></div>
         </article>
       </div>
     </main>
 
-    <footer class="footer" role="contentinfo">
-      <div class="small">© Chaitva Organics — All rights reserved</div>
-      <div class="small">Support: hello@chaitva.in</div>
-    </footer>
+    <footer class="footer" role="contentinfo"><div class="small">© Chaitva Organics</div><div class="small">Support: hello@chaitva.in</div></footer>
   </div>
 
-<script>
-(function(){
-  // Buy buttons -> build a robust payments.html?product=..&price=.. and navigate
-  const buyButtons = document.querySelectorAll('.buyBtn');
-  buyButtons.forEach(btn => {
-    btn.addEventListener('click', function () {
-      const card = btn.closest('.card');
-      if (!card) return;
-      const product = card.getAttribute('data-product') || '';
-      const price = card.getAttribute('data-price') || '';
-      const params = new URLSearchParams({ product: product, price: price });
-      // use assign() so navigation works both locally (file://) and when hosted
-      location.assign('payments.html?' + params.toString());
-    });
-  });
-})();
-</script>
+  <script>
+    (function(){
+      // Buy buttons -> payments page (absolute URL)
+      const buyButtons = document.querySelectorAll('.buyBtn');
+      buyButtons.forEach(btn => {
+        btn.addEventListener('click', function () {
+          const card = btn.closest('.card');
+          if(!card) return;
+          const product = card.getAttribute('data-product') || '';
+          const price = card.getAttribute('data-price') || '';
+          const q = new URLSearchParams({ product: product, price: price });
+          location.assign('https://revanth-nani.github.io/Organics-store/payments.html?' + q.toString());
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
